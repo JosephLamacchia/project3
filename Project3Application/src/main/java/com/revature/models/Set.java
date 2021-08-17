@@ -25,37 +25,12 @@ public class Set {
 	@Column(name="title")
 	private String title;
 	
+	@Column(name="category")
+	private String category;
+	
 	@OneToMany
 	@JoinColumn(name="set_id")
 	private List<Flashcard> flashcards;
-
-	public Set(int creatorId, String title) {
-		super();
-		this.creatorId = creatorId;
-		this.title = title;
-	}
-
-	public Set(int id, int creatorId, String title) {
-		super();
-		this.id = id;
-		this.creatorId = creatorId;
-		this.title = title;
-	}
-
-	public Set(int creatorId, String title, List<Flashcard> flashcards) {
-		super();
-		this.creatorId = creatorId;
-		this.title = title;
-		this.flashcards = flashcards;
-	}
-
-	public Set(int id, int creatorId, String title, List<Flashcard> flashcards) {
-		super();
-		this.id = id;
-		this.creatorId = creatorId;
-		this.title = title;
-		this.flashcards = flashcards;
-	}
 
 	public int getId() {
 		return id;
@@ -80,6 +55,14 @@ public class Set {
 	public void setTitle(String title) {
 		this.title = title;
 	}
+	
+	public String getCategory() {
+		return category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
+	}
 
 	public List<Flashcard> getFlashcards() {
 		return flashcards;
@@ -91,7 +74,8 @@ public class Set {
 
 	@Override
 	public String toString() {
-		return "Set [id=" + id + ", creatorId=" + creatorId + ", title=" + title + ", flashcards=" + flashcards + "]";
+		return "Set [id=" + id + ", creatorId=" + creatorId + ", title=" + title + ", category=" + category
+				+ ", flashcards=" + flashcards + "]";
 	}
 	
 }
