@@ -9,7 +9,7 @@ import { flashcardset } from 'src/app/Models/flashcard-set';
   styleUrls: ['./set-manager.component.css']
 })
 export class SetManagerComponent implements OnInit {
-  card: flashcard = new flashcard('question','answer');
+  card: flashcard = new flashcard(1,'question','answer');
   cardset: flashcardset = new flashcardset(1,'category?','set1')
  setName = '';
  selected:any;
