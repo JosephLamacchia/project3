@@ -5,16 +5,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SetManagerComponent } from './Components/set-manager/set-manager.component';
 import { FormsModule } from '@angular/forms';
+import { CardrunnerComponent } from './Components/cardrunner/cardrunner.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SetManagerComponent
+    SetManagerComponent,
+    CardrunnerComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
