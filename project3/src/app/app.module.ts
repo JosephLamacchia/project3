@@ -7,19 +7,24 @@ import { SetManagerComponent } from './Components/set-manager/set-manager.compon
 import { FormsModule } from '@angular/forms';
 import { CardrunnerComponent } from './Components/cardrunner/cardrunner.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomepageComponent } from './homepage/homepage.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     SetManagerComponent,
-    CardrunnerComponent
+    CardrunnerComponent,
+    HomepageComponent
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    
+
   ],
   providers: [],
   bootstrap: [AppComponent]
