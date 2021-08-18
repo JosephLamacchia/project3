@@ -24,7 +24,8 @@
 
 <button (click)="prevQuestion()" type="button" class="btn btn-info btn-lg">Previous Question</button> 
 <button (click)="nextQuestion()" type="button" class="btn btn-info btn-lg">Next Question</button>      
-<button type="button" class="btn btn-info btn-lg">Mark as Mastered</button>
-<button type="button" class="btn btn-info btn-lg">Enter Answer</button>      
-
-
+<button (click)="markMastered()" type="button" class="btn btn-info btn-lg">Mark as Mastered</button>
+<div class="form-floating">
+	<label for="floatingTextarea2">Your Answer</label>
+	<textarea class="form-control" placeholder="Type your answer here" id="floatingTextarea2" style="height: 100px"></textarea>
+</div>

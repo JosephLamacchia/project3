@@ -70,4 +70,8 @@ export class CardrunnerComponent implements OnInit {
     }
   }
 
+  markMastered(){
+    alert("Marked mastered");
+  }
+
 }
