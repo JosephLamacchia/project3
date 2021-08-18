@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { FlashCard } from '../models/Card';
+import { flashcard } from '../Models/flashcard';
 
 @Injectable({
   providedIn: 'root'
@@ -13,16 +13,16 @@ export class FlashcardsService {
 
   private postHeaders = new HttpHeaders({ 'Content-Type': 'application/json' });
 
-  getAllCards() :Observable<FlashCard[]>{
-    return this.http.get<FlashCard[]>('http://localhost:8080/cards');
+  getAllCards() :Observable<flashcard[]>{
+    return this.http.get<flashcard[]>('http://localhost:8080/cards');
   }
 
-  addCard(card: FlashCard): Observable<FlashCard>{
-    return this.http.post<FlashCard>('http://localhost:8080/cards', card, { headers: this.postHeaders });
+  addCard(card: flashcard): Observable<flashcard>{
+    return this.http.post<flashcard>('http://localhost:8080/cards', card, { headers: this.postHeaders });
   }
 
-  updateCard(card: FlashCard): Observable<FlashCard>{
-    return this.http.put<FlashCard>('http://localhost:8080/cards/' + card.id, card, { headers: this.postHeaders });
+  updateCard(card: flashcard): Observable<flashcard>{
+    return this.http.put<flashcard>('http://localhost:8080/cards/' + card.id, card, { headers: this.postHeaders });
   }
 
 }
