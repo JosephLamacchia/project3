@@ -60,7 +60,9 @@ export class CardrunnerComponent implements OnInit {
   }
 
   prevQuestion(){
-    
+    if(this.flip == 'active'){
+      this.flip = 'inactive';
+    }
     if(this.crnt != 0){
       this.question = this.testCards[this.crnt - 1].question;
       this.answer = this.testCards[this.crnt - 1].answer;
