@@ -10,8 +10,8 @@ button{
   
   .tp-box {
     position: relative;
-    width: 300px;
-    height: 600px;
+    width: 500px;
+    height: 300px;
     margin: 3rem auto;
     -webkit-transform-style: preserve-3d;
             transform-style: preserve-3d;
@@ -49,4 +49,8 @@ button{
     -webkit-transform : rotateY(-180deg);
     -ms-transform     : rotateY(-180deg);
     transform         : rotateY(-180deg);
+  }
+
+  .cardText{
+    font-size: 20px;
   }
