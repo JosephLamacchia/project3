@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { FlashCardSet } from '../models/CardSet';
-import { User } from '../models/CardSet';
+import { flashcardset } from '../Models/flashcard-set';
+import { user } from '../Models/user';
 
 @Injectable({
   providedIn: 'root'
@@ -14,27 +14,27 @@ export class FlashcardsetsService {
 
   private postHeaders = new HttpHeaders({ 'Content-Type': 'application/json' });
 
-  getAllCardSets() :Observable<FlashCardSet[]>{
-    return this.http.get<FlashCardSet[]>('http://localhost:8080/cardsets');
+  getAllCardSets() :Observable<flashcardset[]>{
+    return this.http.get<flashcardset[]>('http://localhost:8080/cardsets');
   }
 
-  getCardSetsByUserId(user: User) :Observable<FlashCardSet[]>{
-    return this.http.get<FlashCardSet[]>('http://localhost:8080/cardsets/' + user.id );
+  getCardSetsByUserId(user: user) :Observable<flashcardset[]>{
+    return this.http.get<flashcardset[]>('http://localhost:8080/cardsets/' + user.user_id );
   }
 
-  addCardSet(cardset: FlashCardSet): Observable<FlashCardSet>{
-    return this.http.post<FlashCardSet>('http://localhost:8080/cardsets', cardset, { headers: this.postHeaders });
+  addCardSet(cardset: flashcardset): Observable<flashcardset>{
+    return this.http.post<flashcardset>('http://localhost:8080/cardsets', cardset, { headers: this.postHeaders });
   }
 
-  updateCardSet(cardset: FlashCardSet): Observable<FlashCardSet>{
-    return this.http.put<FlashCardSet>('http://localhost:8080/cardsets/' + cardset.id, cardset, { headers: this.postHeaders });
+  updateCardSet(cardset: flashcardset): Observable<flashcardset>{
+    return this.http.put<flashcardset>('http://localhost:8080/cardsets/' + cardset.setid, cardset, { headers: this.postHeaders });
   }
 
-  getCardSetByCategory(param: string): Observable<FlashCardSet[]> {
-    return this.http.get<FlashCardSet[]>('http://localhost:8080/cardsets/search-category/?category=' + param, {responseType: "json"} );
+  getCardSetByCategory(param: string): Observable<flashcardset[]> {
+    return this.http.get<flashcardset[]>('http://localhost:8080/cardsets/search-category/?category=' + param, {responseType: "json"} );
   }
 
-  getCardSetByName(name: string): Observable<FlashCardSet>{
-    return this.http.get<FlashCardSet>('http://localhost:8080/cardsets/search-name?name=' + name);
+  getCardSetByName(name: string): Observable<flashcardset>{
+    return this.http.get<flashcardset>('http://localhost:8080/cardsets/search-name?name=' + name);
   }
 }
