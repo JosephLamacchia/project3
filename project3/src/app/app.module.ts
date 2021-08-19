@@ -13,12 +13,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     SetManagerComponent,
     CardrunnerComponent,
-    EditcardComponent  
+    EditcardComponent 
   ],
   imports: [
     BrowserModule,
