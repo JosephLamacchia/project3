@@ -1,0 +1,47 @@
+<ng-template #content let-modal>
+	<div class="modal-header">
+		<h4 class="modal-title"
+			id="modal-basic-title">
+			Add/Edit Cards
+		</h4>
+		<button type="button" class="close"
+				aria-label="Close" (click)=
+				"modal.dismiss('Cross click')">
+
+			<span aria-hidden="true">
+				×
+			</span>
+		</button>
+	</div>
+	<div class="modal-body">
+		<form>
+			<div class="form-group">
+				<label for="question">
+					Question
+				</label>
+				<div class="input-group">
+					<input id="question" class="form-control" name="question" [ngModel]="card.question">
+				</div>
+                    <label for="answer">
+                       Answer 
+                    </label>
+                    <div class="input-group">
+                        <input id="answer" class="form-control" name="answer" [ngModel]="card.answer">
+                    </div>                
+			</div>
+		</form>
+	</div>
+	<div class="modal-footer">
+		<button type="button"
+			class="btn btn-outline-dark"
+			(click)="modal.close('Save click')">
+			Save
+		</button>
+	</div>
+</ng-template>
+
+<button class="btn btn-lg btn-outline-primary"
+	(click)="open(content, card)">
+	add/edit cards
+</button>
+

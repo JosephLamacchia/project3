@@ -7,19 +7,27 @@ import { SetManagerComponent } from './Components/set-manager/set-manager.compon
 import { FormsModule } from '@angular/forms';
 import { CardrunnerComponent } from './Components/cardrunner/cardrunner.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { EditcardComponent } from './Components/editcard/editcard.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     SetManagerComponent,
-    CardrunnerComponent
-    
+    CardrunnerComponent,
+    EditcardComponent  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgbModule,
+    ReactiveFormsModule,
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
