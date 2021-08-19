@@ -7,11 +7,12 @@ import { SetManagerComponent } from './Components/set-manager/set-manager.compon
 import { FormsModule } from '@angular/forms';
 import { CardrunnerComponent } from './Components/cardrunner/cardrunner.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EditcardComponent } from './Components/editcard/editcard.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { EditcardComponent } from './Components/editcard/editcard.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
-
+import { HomepageComponent } from './homepage/homepage.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ToastrModule } from 'ngx-toastr';
     AppComponent,
     SetManagerComponent,
     CardrunnerComponent,
-    EditcardComponent 
+    EditcardComponent, 
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
