@@ -9,7 +9,6 @@ import { CardrunnerComponent } from './Components/cardrunner/cardrunner.componen
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EditcardComponent } from './Components/editcard/editcard.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { EditcardComponent } from './Components/editcard/editcard.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { HomepageComponent } from './homepage/homepage.component';
